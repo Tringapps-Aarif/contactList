@@ -25,8 +25,7 @@ class contactList {
         Hashtable<String, contact> hstable = new Hashtable<>();
         Scanner sc = new Scanner(System.in);
         while (ch != 5) {
-            System.out.println(
-                    " \n1.Create new Contact \n2.Delete existing contact \n3.Search a contact list \n4.Contct list \n5.Exit \nEnter Your Choice : ");
+            System.out.println(" \n1.Create new Contact \n2.Delete existing contact \n3.Search a contact list \n4.Contct list \n5.Exit \nEnter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
                 case 1: {
@@ -36,8 +35,8 @@ class contactList {
                     Long num = sc.nextLong();
                     System.out.println("Email Id : ");
                     String emailId = sc.next();
-                    contact info = new contact(num, emailId);
-                    hstable.put(name, info);
+                    contact obj = new contact(num, emailId);
+                    hstable.put(name, obj);
                 }
                     break;
                 case 2: {
@@ -49,12 +48,7 @@ class contactList {
                 case 3: {
                     System.out.println("Name : ");
                     name = sc.next();
-                    if (hstable.containsKey(name)) {
-                        System.out.println("Name: " + name);
-                        System.out.print(" " + hstable.get(name));
-                    } else {
-                        System.out.println("\nEnter the existing contact\n");
-                    }
+                        System.out.println("Name: " + name + " " + hstable.get(name));            
                 }
                     break;
                 case 4:
