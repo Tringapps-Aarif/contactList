@@ -14,7 +14,7 @@ class contact {
     }
 
     public String toString() {
-        return "  Phone Number : " + num + " Email ID : " + emailId;
+        return "Mobile number : " + num + "Email id : " + emailId;
     }
 }
 
